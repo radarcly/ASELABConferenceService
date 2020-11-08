@@ -1,0 +1,23 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: conference-service
+  datasource:
+    url: jdbc:mysql://localhost:3306/conference?useUnicode=true&characterEncoding=utf8&useSSL=false&serverTimezone=Asia/Shanghai
+    username: root
+    password: 980510
+    driver-class-name: com.mysql.jdbc.Driver
+mybatis:
+  typeAliasesPackage: com.example.demo01.model
+  mapper-locations: classpath*:mapper/**/*.xml
+
+
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    service-url:
+      defaultZone: http://fduse:Fudanse2019@106.14.16.245:8911/eureka/
+    register-with-eureka: true
+    fetch-registry: true
