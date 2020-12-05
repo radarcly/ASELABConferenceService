@@ -6,7 +6,7 @@ spring:
   datasource:
     url: jdbc:mysql://localhost:3306/conference?useUnicode=true&characterEncoding=utf8&useSSL=false&serverTimezone=Asia/Shanghai
     username: root
-    password: 980510
+    password: root
     driver-class-name: com.mysql.jdbc.Driver
 mybatis:
   typeAliasesPackage: com.example.demo01.model
@@ -15,7 +15,7 @@ mybatis:
 
 eureka:
   instance:
-    hostname: localhost
+    hostname: http://106.52.124.133/
   client:
     service-url:
       defaultZone: http://fduse:Fudanse2019@106.14.16.245:8911/eureka/
