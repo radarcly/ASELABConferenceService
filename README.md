@@ -1,15 +1,22 @@
 # ASELABConferenceService
 ## 部署
 dockerfile
+
 FROM java:8
+
 COPY "./target/conference-0.0.1-SNAPSHOT.jar" "/conference-0.0.1-SNAPSHOT.jar"
+
 EXPOSE 8080
+
 CMD ["java", "-jar","conference-0.0.1-SNAPSHOT.jar","--spring.profiles.active=product"]
 
 ## 运行
 #!/bin/bash
+
 mvn clean package -DskipTests
+
 docker build -t aselab:conference .
+
 docker run -p 8080:8080 -d --name aselabconferenceservice aselab:conference
 
 ## REST api的访问
