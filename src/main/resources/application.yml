@@ -14,9 +14,9 @@ mybatis:
 
 eureka:
   instance:
-    hostname: http://106.52.124.133/
+    hostname: localhost
   client:
     service-url:
-      defaultZone: http://fduse:Fudanse2019@106.14.16.245:8911/eureka/
+      defaultZone: http://fduse:Fudanse2019@eureka-service:8911/eureka/
     register-with-eureka: true
     fetch-registry: true
